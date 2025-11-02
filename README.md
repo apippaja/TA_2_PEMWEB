@@ -16,7 +16,7 @@ Website ini saya rancang untuk memperkenalkan siapa saya, latar belakang pendidi
 
 
 website sebelum update 
-<img width="905" height="906" alt="Foto Web 1" src="https://github.com/user-attachments/assets/f1a903b0-118c-4e34-8657-469f8ea1d364" />
+<img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/1e78eb8f-675f-45fb-8566-f6b88aa62cb1" />
 
 website setelah update 
 <img width="1918" height="801" alt="foto_web_1" src="https://github.com/user-attachments/assets/f1beb4e6-8331-4b74-8f91-4891195b99e3" />
