@@ -1,0 +1,294 @@
+/* -------------------- */
+/* 1. VARIABEL & RESET  */
+/* -------------------- */
+
+:root {
+    /* Skema Warna Bersih & Modern */
+    --warna-primer: #007BFF; /* Biru Akses (Enak dilihat) */
+    --warna-sekunder: #F8F9FA; /* Abu Muda/Putih Bersih */
+    --warna-gelap: #212529; /* Hitam Teks Utama */
+    --warna-terang: #FFFFFF; /* Putih Latar */
+    --warna-aksen-ringan: #E9ECEF; /* Abu untuk Border/Pemisah */
+    
+    /* Font */
+    --font-utama: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Konsep Box Model: Padding dan Border termasuk dalam lebar/tinggi */
+}
+
+body {
+    font-family: var(--font-utama);
+    line-height: 1.6;
+    color: var(--warna-gelap);
+    background-color: var(--warna-terang);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Menghilangkan bullet pada list navigasi */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--warna-primer);
+}
+
+/* -------------------- */
+/* 2. HEADER & NAVIGASI */
+/* -------------------- */
+
+header {
+    background-color: var(--warna-terang);
+    color: var(--warna-gelap);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--warna-aksen-ringan);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex; /* Konsep Flexbox Dasar */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--warna-primer);
+}
+
+nav ul {
+    display: flex; /* Flexbox untuk item navigasi horizontal */
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--warna-gelap);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--warna-primer);
+}
+
+/* -------------------- */
+/* 3. HERO SECTION & FOTO PROFIL */
+/* -------------------- */
+
+.hero {
+    background-color: var(--warna-sekunder);
+    padding: 80px 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+/* CSS untuk mengatur tata letak hero-content */
+.hero-content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Memusatkan elemen secara horizontal */
+    text-align: center; 
+    width: 100%; /* Penting untuk pemusatan */
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin: 10px 0;
+    color: var(--warna-gelap);
+}
+
+.hero-content h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--warna-primer);
+    margin-bottom: 30px;
+}
+
+/* GAYA FOTO PROFIL DENGAN BORDER BIRU */
+.profile-img {
+    width: 180px; /* Ukuran lebar foto */
+    height: 180px; /* Ukuran tinggi foto */
+    border-radius: 50%; /* Membuat foto menjadi bulat */
+    object-fit: cover; /* Memastikan foto mengisi area tanpa terdistorsi */
+    border: 5px solid var(--warna-primer); /* Border biru di sekeliling foto */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2); /* Bayangan lembut */
+    margin: 20px auto 30px auto; /* Margin untuk pemisahan */
+    display: block; 
+}
+
+
+/* -------------------- */
+/* 4. SECTION UMUM      */
+/* -------------------- */
+
+section {
+    padding: 60px 0;
+}
+
+section:nth-child(even) { /* Latar belakang berbeda untuk pemisahan visual */
+    background-color: var(--warna-sekunder);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: var(--warna-gelap);
+}
+
+/* -------------------- */
+/* 5. TENTANG SAYA      */
+/* -------------------- */
+
+.about-grid {
+    display: flex; /* Flexbox untuk menata dua kartu biodata */
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.bio-card {
+    flex: 1;
+    background: var(--warna-terang);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Shadow lembut */
+}
+
+.bio-card h3 {
+    color: var(--warna-primer);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--warna-aksen-ringan);
+    padding-bottom: 5px;
+}
+
+.bio-card ul {
+    padding-left: 0;
+}
+
+.bio-card ul li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+.moto {
+    background-color: #f1f9ff;
+    border-left: 4px solid var(--warna-primer);
+    padding: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: var(--warna-gelap);
+}
+
+/* -------------------- */
+/* 6. KEAHLIAN          */
+/* -------------------- */
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.skill-item {
+    background: var(--warna-terang);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.skill-item h4 {
+    color: var(--warna-primer);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* -------------------- */
+/* 7. KONTAK            */
+/* -------------------- */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+}
+
+
+/* -------------------- */
+/* 8. FOOTER            */
+/* -------------------- */
+
+footer {
+    background-color: var(--warna-gelap);
+    color: var(--warna-terang);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* -------------------- */
+/* 9. RESPONSIVE DASAR  */
+/* -------------------- */
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    .about-grid {
+        flex-direction: column;
+    }
+}
