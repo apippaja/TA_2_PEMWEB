@@ -1,14 +1,14 @@
 /* -------------------- */
-/* 1. VARIABEL & RESET  */
+/* 1. VARIABEL & RESET  */
 /* -------------------- */
 
 :root {
-    /* Skema Warna Bersih & Modern */
-    --warna-primer: #007BFF; /* Biru Akses (Enak dilihat) */
-    --warna-sekunder: #F8F9FA; /* Abu Muda/Putih Bersih */
-    --warna-gelap: #212529; /* Hitam Teks Utama */
-    --warna-terang: #FFFFFF; /* Putih Latar */
-    --warna-aksen-ringan: #E9ECEF; /* Abu untuk Border/Pemisah */
+    /* Skema Warna Dark Mode: Hitam, Ungu Tua, & Oranye Terang */
+    --warna-primer: #FF5733; /* Oranye Terang/Vibrant Orange (Aksen Kuat) */
+    --warna-sekunder: #1A1A1A; /* BARU: Abu Sangat Gelap (Latar Sekunder) */
+    --warna-gelap: #E0E0E0; /* BARU: Abu Terang (Teks Utama, Kontras dengan Hitam) */
+    --warna-terang: #000000; /* BARU: Hitam Pelek (Latar Belakang Utama) */
+    --warna-aksen-ringan: #333333; /* BARU: Abu Gelap untuk Border/Pemisah */
     
     /* Font */
     --font-utama: 'Poppins', sans-serif;
@@ -23,8 +23,8 @@
 body {
     font-family: var(--font-utama);
     line-height: 1.6;
-    color: var(--warna-gelap);
-    background-color: var(--warna-terang);
+    color: var(--warna-gelap); /* Teks utama menjadi terang */
+    background-color: var(--warna-terang); /* Latar belakang utama menjadi hitam */
 }
 
 .container {
@@ -48,7 +48,7 @@ a {
 /* -------------------- */
 
 header {
-    background-color: var(--warna-terang);
+    background-color: var(--warna-terang); /* Header tetap hitam */
     color: var(--warna-gelap);
     padding: 15px 0;
     border-bottom: 1px solid var(--warna-aksen-ringan);
@@ -78,7 +78,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--warna-gelap);
+    color: var(--warna-gelap); /* Teks navigasi menjadi terang */
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -92,7 +92,7 @@ nav ul li a:hover {
 /* -------------------- */
 
 .hero {
-    background-color: var(--warna-sekunder);
+    background-color: var(--warna-sekunder); /* Latar hero menjadi abu gelap */
     padding: 80px 0;
     min-height: 60vh;
     display: flex;
@@ -111,7 +111,7 @@ nav ul li a:hover {
 .hero-content h2 {
     font-size: 3em;
     margin: 10px 0;
-    color: var(--warna-gelap);
+    color: var(--warna-gelap); /* Heading menjadi terang */
 }
 
 .hero-content h3 {
@@ -121,21 +121,21 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* GAYA FOTO PROFIL DENGAN BORDER BIRU */
+/* GAYA FOTO PROFIL DENGAN BORDER ORANGE */
 .profile-img {
     width: 180px; /* Ukuran lebar foto */
     height: 180px; /* Ukuran tinggi foto */
     border-radius: 50%; /* Membuat foto menjadi bulat */
     object-fit: cover; /* Memastikan foto mengisi area tanpa terdistorsi */
-    border: 5px solid var(--warna-primer); /* Border biru di sekeliling foto */
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2); /* Bayangan lembut */
+    border: 5px solid var(--warna-primer); /* Border Orange Terang */
+    box-shadow: 0 5px 15px rgba(255, 87, 51, 0.5); /* Bayangan sedikit lebih kuat untuk dark mode */
     margin: 20px auto 30px auto; /* Margin untuk pemisahan */
     display: block; 
 }
 
 
 /* -------------------- */
-/* 4. SECTION UMUM      */
+/* 4. SECTION UMUM      */
 /* -------------------- */
 
 section {
@@ -143,18 +143,18 @@ section {
 }
 
 section:nth-child(even) { /* Latar belakang berbeda untuk pemisahan visual */
-    background-color: var(--warna-sekunder);
+    background-color: var(--warna-sekunder); /* Latar abu gelap untuk section genap */
 }
 
 section h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2em;
-    color: var(--warna-gelap);
+    color: var(--warna-gelap); /* Heading menjadi terang */
 }
 
 /* -------------------- */
-/* 5. TENTANG SAYA      */
+/* 5. TENTANG SAYA      */
 /* -------------------- */
 
 .about-grid {
@@ -165,10 +165,10 @@ section h2 {
 
 .bio-card {
     flex: 1;
-    background: var(--warna-terang);
+    background: var(--warna-sekunder); /* Latar kartu menjadi abu gelap */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Shadow lembut */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Shadow lebih gelap */
 }
 
 .bio-card h3 {
@@ -188,8 +188,8 @@ section h2 {
 }
 
 .moto {
-    background-color: #f1f9ff;
-    border-left: 4px solid var(--warna-primer);
+    background-color: #222222; /* Latar yang serasi dengan Dark Mode */
+    border-left: 4px solid var(--warna-primer); /* Border Orange Terang */
     padding: 15px;
     margin-bottom: 20px;
     font-style: italic;
@@ -197,7 +197,7 @@ section h2 {
 }
 
 /* -------------------- */
-/* 6. KEAHLIAN          */
+/* 6. KEAHLIAN          */
 /* -------------------- */
 
 .skills-list {
@@ -208,18 +208,18 @@ section h2 {
 }
 
 .skill-item {
-    background: var(--warna-terang);
+    background: var(--warna-sekunder); /* Latar skill item menjadi abu gelap */
     padding: 25px;
     border-radius: 8px;
     text-align: center;
     width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Shadow lebih gelap */
     transition: transform 0.3s;
 }
 
 .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
 }
 
 .skill-item h4 {
@@ -229,7 +229,7 @@ section h2 {
 }
 
 /* -------------------- */
-/* 7. KONTAK            */
+/* 7. KONTAK            */
 /* -------------------- */
 
 .contact {
@@ -250,19 +250,19 @@ section h2 {
 
 
 /* -------------------- */
-/* 8. FOOTER            */
+/* 8. FOOTER            */
 /* -------------------- */
 
 footer {
-    background-color: var(--warna-gelap);
-    color: var(--warna-terang);
+    background-color: var(--warna-sekunder); /* Footer menjadi abu gelap */
+    color: var(--warna-gelap);
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
 }
 
 /* -------------------- */
-/* 9. RESPONSIVE DASAR  */
+/* 9. RESPONSIVE DASAR  */
 /* -------------------- */
 
 @media (max-width: 768px) {
